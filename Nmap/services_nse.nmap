@@ -1,0 +1,55 @@
+# Nmap 7.99 scan initiated Fri Sep 18 04:54:04 2026 as: /usr/lib/nmap/nmap -sS -sV -sC -Pn -n --reason -T3 -p 21,22,25,53,80,110,111,135,139,143,443,445,465,587,993,995,2082,2083,2086,2087,2095,2096,2222,3306 -oA /root/Networkwalks_PM5/services_nse 192.232.216.135
+Nmap scan report for 192.232.216.135
+Host is up, received user-set (0.0017s latency).
+
+PORT     STATE    SERVICE      REASON         VERSION
+21/tcp   filtered ftp          no-response
+22/tcp   filtered ssh          no-response
+25/tcp   open     smtp?        syn-ack ttl 64
+|_smtp-commands: Couldn't establish connection on port 25
+53/tcp   filtered domain       no-response
+80/tcp   filtered http         no-response
+110/tcp  open     pop3         syn-ack ttl 64 Dovecot pop3d
+|_pop3-capabilities: UIDL RESP-CODES SASL(PLAIN LOGIN) STLS CAPA PIPELINING USER TOP AUTH-RESP-CODE
+111/tcp  filtered rpcbind      no-response
+135/tcp  filtered msrpc        no-response
+139/tcp  filtered netbios-ssn  no-response
+143/tcp  open     imap         syn-ack ttl 64 Dovecot imapd
+|_imap-capabilities: STARTTLS LITERAL+ IDLE listed ENABLE AUTH=LOGINA0001 ID more post-login have LOGIN-REFERRALS Pre-login capabilities OK IMAP4rev1 AUTH=PLAIN SASL-IR
+443/tcp  filtered https        no-response
+445/tcp  filtered microsoft-ds no-response
+465/tcp  open     smtps?       syn-ack ttl 64
+| smtp-commands: gator3068.hostgator.com Hello nmap.scanme.org [155.117.189.55], SIZE 52428800, LIMITS MAILMAX=50 RCPTMAX=50000, 8BITMIME, PIPELINING, PIPECONNECT, AUTH PLAIN LOGIN, HELP
+|_ Commands supported: AUTH HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP
+| ssl-cert: Subject: commonName=*.hostgator.com
+| Subject Alternative Name: DNS:*.hostgator.com, DNS:hostgator.com
+| Not valid before: 2026-08-07T00:00:00
+|_Not valid after:  2027-02-21T23:59:59
+587/tcp  open     smtp         syn-ack ttl 64 Exim smtpd 4.100
+| smtp-commands: gator3068.hostgator.com Hello nmap.scanme.org [155.117.189.55], SIZE 52428800, LIMITS MAILMAX=50 RCPTMAX=50000, 8BITMIME, PIPELINING, PIPECONNECT, AUTH PLAIN LOGIN, STARTTLS, HELP
+|_ Commands supported: AUTH STARTTLS HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP
+993/tcp  open     imaps?       syn-ack ttl 64
+| ssl-cert: Subject: commonName=*.hostgator.com
+| Subject Alternative Name: DNS:*.hostgator.com, DNS:hostgator.com
+| Not valid before: 2026-08-07T00:00:00
+|_Not valid after:  2027-02-21T23:59:59
+|_ssl-date: TLS randomness does not represent time
+|_imap-capabilities: listed ENABLE AUTH=LOGINA0001 LITERAL+ more have post-login IDLE capabilities Pre-login OK LOGIN-REFERRALS ID IMAP4rev1 AUTH=PLAIN SASL-IR
+995/tcp  open     pop3s?       syn-ack ttl 64
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=*.hostgator.com
+| Subject Alternative Name: DNS:*.hostgator.com, DNS:hostgator.com
+| Not valid before: 2026-08-07T00:00:00
+|_Not valid after:  2027-02-21T23:59:59
+2082/tcp filtered infowave     no-response
+2083/tcp filtered radsec       no-response
+2086/tcp filtered gnunet       no-response
+2087/tcp filtered eli          no-response
+2095/tcp filtered nbx-ser      no-response
+2096/tcp filtered nbx-dir      no-response
+2222/tcp filtered EtherNetIP-1 no-response
+3306/tcp filtered mysql        no-response
+Service Info: Host: gator3068.hostgator.com
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Sep 18 04:59:14 2026 -- 1 IP address (1 host up) scanned in 310.22 seconds
