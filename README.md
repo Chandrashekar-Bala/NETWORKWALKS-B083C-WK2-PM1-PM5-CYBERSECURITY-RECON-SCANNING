@@ -515,15 +515,6 @@ Security significance
 An indexed result alone is not sufficient to claim current exposure or a
 vulnerability.
 
-## Evidence status
-
-The supplied PM2 document is preserved in:
-
-`source-material/W2-PM2-LAB-PRACTICE.pdf`
-
-The repository does **not** invent a list of ten discovered cameras or
-ten mathematics listings because that execution dataset was not captured
-in the evidence set being consolidated here.
 
 ------------------------------------------------------------------------
 
@@ -559,13 +550,6 @@ Maltego
        Analyst validation
 ```
 
-## Evidence status
-
-No completed Maltego graph, transform output or validated PM3 finding is
-represented as completed here.
-
-This section is intentionally reserved so that actual PM3 screenshots
-and transform results can be inserted later.
 
 ### PM3 evidence placeholder
 
