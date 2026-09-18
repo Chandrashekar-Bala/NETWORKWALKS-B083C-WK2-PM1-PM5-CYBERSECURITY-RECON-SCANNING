@@ -1,24 +1,21 @@
-::: {align="center"}
-# 🔐 Week 2 --- Networkwalks Cybersecurity Assessment
+<div align="center">
+
+# 🔐 Week 2 — Networkwalks Cybersecurity Assessment
 
 ### External Footprinting • Passive Reconnaissance • Network Scanning • Evidence-Based Security Analysis
 
-```{=html}
 <p>
-```
-`<img src="https://img.shields.io/badge/Cybersecurity-Authorized%20Assessment-0B5FFF?style=flat-square" />`{=html}
-`<img src="https://img.shields.io/badge/Target-networkwalks.com-1F6FEB?style=flat-square" />`{=html}
-`<img src="https://img.shields.io/badge/Platform-Kali%20Linux-557C94?style=flat-square&logo=kalilinux&logoColor=white" />`{=html}
-`<img src="https://img.shields.io/badge/Week%202-DETAILED-6A5ACD?style=flat-square" />`{=html}
-`<img src="https://img.shields.io/badge/Evidence-51%20Screenshots-2D7D46?style=flat-square" />`{=html}
-`<img src="https://img.shields.io/badge/Zenmap-Reserved%20for%20Final%20Evidence-F39C12?style=flat-square" />`{=html}
-
-```{=html}
+  <img src="https://img.shields.io/badge/Cybersecurity-Authorized%20Assessment-0B5FFF?style=flat-square" />
+  <img src="https://img.shields.io/badge/Target-networkwalks.com-1F6FEB?style=flat-square" />
+  <img src="https://img.shields.io/badge/Platform-Kali%20Linux-557C94?style=flat-square&logo=kalilinux&logoColor=white" />
+  <img src="https://img.shields.io/badge/Week%202-DETAILED-6A5ACD?style=flat-square" />
+  <img src="https://img.shields.io/badge/Evidence-51%20Screenshots-2D7D46?style=flat-square" />
+  <img src="https://img.shields.io/badge/Zenmap-Reserved%20for%20Final%20Evidence-F39C12?style=flat-square" />
 </p>
-```
-:::
 
-------------------------------------------------------------------------
+</div>
+
+---
 
 ## 📌 What This Week Was About
 
