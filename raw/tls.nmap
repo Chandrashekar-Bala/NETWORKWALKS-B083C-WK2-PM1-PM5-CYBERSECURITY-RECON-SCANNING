@@ -1,0 +1,508 @@
+# Nmap 7.99 scan initiated Fri Sep 18 05:03:41 2026 as: /usr/lib/nmap/nmap -sV --script ssl-cert,ssl-enum-ciphers -Pn -n --reason -T3 -p 443,465,587,993,995,2083,2087,2096 -oA /root/Networkwalks_PM5/tls 192.232.216.135
+Nmap scan report for 192.232.216.135
+Host is up, received user-set (0.14s latency).
+
+PORT     STATE SERVICE      REASON         VERSION
+443/tcp  open  ssl/http     syn-ack ttl 64 Apache httpd
+|_http-server-header: Apache
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.3: 
+|     ciphers: 
+|       TLS_AKE_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A
+|       TLS_AKE_WITH_CHACHA20_POLY1305_SHA256 (ecdh_x25519) - A
+|       TLS_AKE_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A
+|       TLS_AKE_WITH_AES_128_CCM_SHA256 (ecdh_x25519) - A
+|     cipher preference: server
+|_  least strength: A
+465/tcp  open  ssl/smtp     syn-ack ttl 64 Exim smtpd 4.100
+| ssl-cert: Subject: commonName=*.hostgator.com
+| Subject Alternative Name: DNS:*.hostgator.com, DNS:hostgator.com
+| Issuer: commonName=AVG Web/Mail Shield Root/organizationName=AVG Web/Mail Shield
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2026-08-07T00:00:00
+| Not valid after:  2027-02-21T23:59:59
+| MD5:     8add df64 1723 bf06 475d d6e0 3662 1c50
+| SHA-1:   3279 4046 7da9 6007 f8e9 13c6 477a 46b9 6556 043e
+|_SHA-256: 16b1 b57e bc57 818b 5fcb 568a 46b0 f7c2 df90 9312 45ee 00d4 68b8 a08f c25c 5a4d
+587/tcp  open  smtp         syn-ack ttl 64 Exim smtpd 4.100
+993/tcp  open  ssl/imap     syn-ack ttl 64 Dovecot imapd
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_ARIA_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_ARIA_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_CAMELLIA_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_CAMELLIA_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CCM (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CCM (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_ARIA_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_ARIA_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA256 (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|   TLSv1.3: 
+|     ciphers: 
+|       TLS_AKE_WITH_AES_128_GCM_SHA256 (X25519MLKEM768) - A
+|       TLS_AKE_WITH_AES_256_GCM_SHA384 (X25519MLKEM768) - A
+|       TLS_AKE_WITH_CHACHA20_POLY1305_SHA256 (X25519MLKEM768) - A
+|     cipher preference: client
+|_  least strength: A
+| ssl-cert: Subject: commonName=*.hostgator.com
+| Subject Alternative Name: DNS:*.hostgator.com, DNS:hostgator.com
+| Issuer: commonName=AVG Web/Mail Shield Root/organizationName=AVG Web/Mail Shield
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2026-08-07T00:00:00
+| Not valid after:  2027-02-21T23:59:59
+| MD5:     8add df64 1723 bf06 475d d6e0 3662 1c50
+| SHA-1:   3279 4046 7da9 6007 f8e9 13c6 477a 46b9 6556 043e
+|_SHA-256: 16b1 b57e bc57 818b 5fcb 568a 46b0 f7c2 df90 9312 45ee 00d4 68b8 a08f c25c 5a4d
+995/tcp  open  ssl/pop3     syn-ack ttl 64 Dovecot pop3d
+| ssl-cert: Subject: commonName=*.hostgator.com
+| Subject Alternative Name: DNS:*.hostgator.com, DNS:hostgator.com
+| Issuer: commonName=AVG Web/Mail Shield Root/organizationName=AVG Web/Mail Shield
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2026-08-07T00:00:00
+| Not valid after:  2027-02-21T23:59:59
+| MD5:     8add df64 1723 bf06 475d d6e0 3662 1c50
+| SHA-1:   3279 4046 7da9 6007 f8e9 13c6 477a 46b9 6556 043e
+|_SHA-256: 16b1 b57e bc57 818b 5fcb 568a 46b0 f7c2 df90 9312 45ee 00d4 68b8 a08f c25c 5a4d
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_ARIA_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_ARIA_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_CAMELLIA_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_CAMELLIA_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CCM (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CCM (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_ARIA_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_ARIA_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA256 (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|   TLSv1.3: 
+|     ciphers: 
+|       TLS_AKE_WITH_AES_128_GCM_SHA256 (X25519MLKEM768) - A
+|       TLS_AKE_WITH_AES_256_GCM_SHA384 (X25519MLKEM768) - A
+|       TLS_AKE_WITH_CHACHA20_POLY1305_SHA256 (X25519MLKEM768) - A
+|     cipher preference: client
+|_  least strength: A
+2083/tcp open  ssl/radsec?  syn-ack ttl 64
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CCM (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CCM (dh 2048) - A
+|       TLS_RSA_WITH_AES_256_CCM (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CCM (rsa 2048) - A
+|       TLS_ECDHE_RSA_WITH_CAMELLIA_256_CBC_SHA384 (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA256 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_CAMELLIA_128_CBC_SHA256 (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.3: 
+|     ciphers: 
+|       TLS_AKE_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A
+|       TLS_AKE_WITH_CHACHA20_POLY1305_SHA256 (ecdh_x25519) - A
+|       TLS_AKE_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A
+|       TLS_AKE_WITH_AES_128_CCM_SHA256 (ecdh_x25519) - A
+|     cipher preference: server
+|_  least strength: A
+| ssl-cert: Subject: commonName=*.hostgator.com
+| Subject Alternative Name: DNS:*.hostgator.com, DNS:hostgator.com
+| Issuer: commonName=RapidSSL TLS RSA CA G1/organizationName=DigiCert Inc/countryName=US
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2026-08-07T00:00:00
+| Not valid after:  2027-02-21T23:59:59
+| MD5:     8430 90de a950 f2c3 a383 5789 79e1 10b4
+| SHA-1:   5266 37e5 4a6a 207d 3724 3c1d 5d7c f6fe 722f 7e86
+|_SHA-256: 98a4 d0f7 e26d fc04 0edb b733 a3cd 8d19 77a4 1267 e266 ae47 df04 9ac6 6c11 9d03
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Fri, 18 Sep 2026 09:04:27 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     Set-Cookie: cprelogin=no; HttpOnly; SameSite=Lax; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: cpsession=~pre%3a_ZFQ8h7liWSCv5V0%2cc7a6cb9b3624706a293bba47345e057a; HttpOnly; SameSite=Lax; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; SameSite=Lax; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; SameSite=Lax; domain=gator3068.hostgator.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: PPA_ID=expired; HttpOnly; SameSite=Lax; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     X-Frame-Options: SAMEORIGIN
+|     X-Content-Type-Optio
+|   HTTPOptions: 
+|     HTTP/1.0 200 OK
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Fri, 18 Sep 2026 09:04:30 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     Set-Cookie: cprelogin=no; HttpOnly; SameSite=Lax; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: cpsession=~pre%3anIRDlisMC_N_kJeY%2c6e4efb78ca2332fefe180124ec5ec9a1; HttpOnly; SameSite=Lax; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; SameSite=Lax; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; SameSite=Lax; domain=gator3068.hostgator.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: PPA_ID=expired; HttpOnly; SameSite=Lax; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     X-Frame-Options: SAMEORIGIN
+|_    X-Content-Type-Optio
+2087/tcp open  ssl/eli?     syn-ack ttl 64
+| ssl-cert: Subject: commonName=*.hostgator.com
+| Subject Alternative Name: DNS:*.hostgator.com, DNS:hostgator.com
+| Issuer: commonName=RapidSSL TLS RSA CA G1/organizationName=DigiCert Inc/countryName=US
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2026-08-07T00:00:00
+| Not valid after:  2027-02-21T23:59:59
+| MD5:     8430 90de a950 f2c3 a383 5789 79e1 10b4
+| SHA-1:   5266 37e5 4a6a 207d 3724 3c1d 5d7c f6fe 722f 7e86
+|_SHA-256: 98a4 d0f7 e26d fc04 0edb b733 a3cd 8d19 77a4 1267 e266 ae47 df04 9ac6 6c11 9d03
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CCM (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CCM (dh 2048) - A
+|       TLS_RSA_WITH_AES_256_CCM (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CCM (rsa 2048) - A
+|       TLS_ECDHE_RSA_WITH_CAMELLIA_256_CBC_SHA384 (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA256 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_CAMELLIA_128_CBC_SHA256 (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.3: 
+|     ciphers: 
+|       TLS_AKE_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A
+|       TLS_AKE_WITH_CHACHA20_POLY1305_SHA256 (ecdh_x25519) - A
+|       TLS_AKE_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A
+|       TLS_AKE_WITH_AES_128_CCM_SHA256 (ecdh_x25519) - A
+|     cipher preference: server
+|_  least strength: A
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Fri, 18 Sep 2026 09:04:26 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     Set-Cookie: whostmgrrelogin=no; HttpOnly; SameSite=Lax; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: whostmgrsession=~pre%3amt8FbgxESs554eNl%2c8319cb58273b1a818c7700b722237f85; HttpOnly; SameSite=Lax; path=/; port=2087; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; SameSite=Lax; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; SameSite=Lax; domain=gator3068.hostgator.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: PPA_ID=expired; HttpOnly; SameSite=Lax; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     X-Frame-Options: SAMEORIGIN
+|     X-Conten
+|   HTTPOptions: 
+|     HTTP/1.0 200 OK
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Fri, 18 Sep 2026 09:04:29 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     Set-Cookie: whostmgrrelogin=no; HttpOnly; SameSite=Lax; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: whostmgrsession=~pre%3aoUFt4PStzr78cqFG%2c2dde7d1631e1336aee8a119fdf974f66; HttpOnly; SameSite=Lax; path=/; port=2087; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; SameSite=Lax; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; SameSite=Lax; domain=gator3068.hostgator.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: PPA_ID=expired; HttpOnly; SameSite=Lax; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     X-Frame-Options: SAMEORIGIN
+|_    X-Conten
+2096/tcp open  ssl/nbx-dir? syn-ack ttl 64
+| ssl-cert: Subject: commonName=*.hostgator.com
+| Subject Alternative Name: DNS:*.hostgator.com, DNS:hostgator.com
+| Issuer: commonName=RapidSSL TLS RSA CA G1/organizationName=DigiCert Inc/countryName=US
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2026-08-07T00:00:00
+| Not valid after:  2027-02-21T23:59:59
+| MD5:     8430 90de a950 f2c3 a383 5789 79e1 10b4
+| SHA-1:   5266 37e5 4a6a 207d 3724 3c1d 5d7c f6fe 722f 7e86
+|_SHA-256: 98a4 d0f7 e26d fc04 0edb b733 a3cd 8d19 77a4 1267 e266 ae47 df04 9ac6 6c11 9d03
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CCM (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CCM (dh 2048) - A
+|       TLS_RSA_WITH_AES_256_CCM (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CCM (rsa 2048) - A
+|       TLS_ECDHE_RSA_WITH_CAMELLIA_256_CBC_SHA384 (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA256 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_CAMELLIA_128_CBC_SHA256 (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.3: 
+|     ciphers: 
+|       TLS_AKE_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A
+|       TLS_AKE_WITH_CHACHA20_POLY1305_SHA256 (ecdh_x25519) - A
+|       TLS_AKE_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A
+|       TLS_AKE_WITH_AES_128_CCM_SHA256 (ecdh_x25519) - A
+|     cipher preference: server
+|_  least strength: A
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Fri, 18 Sep 2026 09:04:28 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     Set-Cookie: webmailrelogin=no; HttpOnly; SameSite=Lax; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: webmailsession=~pre%3azt9Tf9M_oCnU83J6%2c9e29aa40f41bd214a4d2251e82325398; HttpOnly; SameSite=Lax; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; SameSite=Lax; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; SameSite=Lax; domain=gator3068.hostgator.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: PPA_ID=expired; HttpOnly; SameSite=Lax; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: roundcube_cookies=enabled;
+|   HTTPOptions: 
+|     HTTP/1.0 200 OK
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Fri, 18 Sep 2026 09:04:31 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     Set-Cookie: webmailrelogin=no; HttpOnly; SameSite=Lax; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: webmailsession=~pre%3atATC030shegvgwdl%2c12cd57f008f6caf007540452f6a524a6; HttpOnly; SameSite=Lax; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; SameSite=Lax; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; SameSite=Lax; domain=gator3068.hostgator.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: PPA_ID=expired; HttpOnly; SameSite=Lax; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|_    Set-Cookie: roundcube_cookies=enabled;
+3 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2083-TCP:V=7.99%T=SSL%I=7%D=9/18%Time=6AACFE92%P=x86_64-pc-linux-gn
+SF:u%r(GetRequest,4000,"HTTP/1\.0\x20200\x20OK\r\nConnection:\x20close\r\n
+SF:Content-Type:\x20text/html;\x20charset=\"utf-8\"\r\nDate:\x20Fri,\x2018
+SF:\x20Sep\x202026\x2009:04:27\x20GMT\r\nCache-Control:\x20no-cache,\x20no
+SF:-store,\x20must-revalidate,\x20private\r\nPragma:\x20no-cache\r\nSet-Co
+SF:okie:\x20cprelogin=no;\x20HttpOnly;\x20SameSite=Lax;\x20expires=Thu,\x2
+SF:001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\n
+SF:Set-Cookie:\x20cpsession=~pre%3a_ZFQ8h7liWSCv5V0%2cc7a6cb9b3624706a293b
+SF:ba47345e057a;\x20HttpOnly;\x20SameSite=Lax;\x20path=/;\x20port=2083;\x2
+SF:0secure\r\nSet-Cookie:\x20roundcube_sessid=expired;\x20HttpOnly;\x20Sam
+SF:eSite=Lax;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/
+SF:;\x20port=2083;\x20secure\r\nSet-Cookie:\x20roundcube_sessauth=expired;
+SF:\x20HttpOnly;\x20SameSite=Lax;\x20domain=gator3068\.hostgator\.com;\x20
+SF:expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2083
+SF:;\x20secure\r\nSet-Cookie:\x20PPA_ID=expired;\x20HttpOnly;\x20SameSite=
+SF:Lax;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20p
+SF:ort=2083;\x20secure\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-Content-Type
+SF:-Optio")%r(HTTPOptions,4000,"HTTP/1\.0\x20200\x20OK\r\nConnection:\x20c
+SF:lose\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\nDate:\x20Fr
+SF:i,\x2018\x20Sep\x202026\x2009:04:30\x20GMT\r\nCache-Control:\x20no-cach
+SF:e,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x20no-cache\r
+SF:\nSet-Cookie:\x20cprelogin=no;\x20HttpOnly;\x20SameSite=Lax;\x20expires
+SF:=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20se
+SF:cure\r\nSet-Cookie:\x20cpsession=~pre%3anIRDlisMC_N_kJeY%2c6e4efb78ca23
+SF:32fefe180124ec5ec9a1;\x20HttpOnly;\x20SameSite=Lax;\x20path=/;\x20port=
+SF:2083;\x20secure\r\nSet-Cookie:\x20roundcube_sessid=expired;\x20HttpOnly
+SF:;\x20SameSite=Lax;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x
+SF:20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20roundcube_sessauth=
+SF:expired;\x20HttpOnly;\x20SameSite=Lax;\x20domain=gator3068\.hostgator\.
+SF:com;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20p
+SF:ort=2083;\x20secure\r\nSet-Cookie:\x20PPA_ID=expired;\x20HttpOnly;\x20S
+SF:ameSite=Lax;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path
+SF:=/;\x20port=2083;\x20secure\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-Cont
+SF:ent-Type-Optio");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2087-TCP:V=7.99%T=SSL%I=7%D=9/18%Time=6AACFE92%P=x86_64-pc-linux-gn
+SF:u%r(GetRequest,4000,"HTTP/1\.0\x20200\x20OK\r\nConnection:\x20close\r\n
+SF:Content-Type:\x20text/html;\x20charset=\"utf-8\"\r\nDate:\x20Fri,\x2018
+SF:\x20Sep\x202026\x2009:04:26\x20GMT\r\nCache-Control:\x20no-cache,\x20no
+SF:-store,\x20must-revalidate,\x20private\r\nPragma:\x20no-cache\r\nSet-Co
+SF:okie:\x20whostmgrrelogin=no;\x20HttpOnly;\x20SameSite=Lax;\x20expires=T
+SF:hu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2087;\x20secu
+SF:re\r\nSet-Cookie:\x20whostmgrsession=~pre%3amt8FbgxESs554eNl%2c8319cb58
+SF:273b1a818c7700b722237f85;\x20HttpOnly;\x20SameSite=Lax;\x20path=/;\x20p
+SF:ort=2087;\x20secure\r\nSet-Cookie:\x20roundcube_sessid=expired;\x20Http
+SF:Only;\x20SameSite=Lax;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GM
+SF:T;\x20path=/;\x20port=2087;\x20secure\r\nSet-Cookie:\x20roundcube_sessa
+SF:uth=expired;\x20HttpOnly;\x20SameSite=Lax;\x20domain=gator3068\.hostgat
+SF:or\.com;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\
+SF:x20port=2087;\x20secure\r\nSet-Cookie:\x20PPA_ID=expired;\x20HttpOnly;\
+SF:x20SameSite=Lax;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20
+SF:path=/;\x20port=2087;\x20secure\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-
+SF:Conten")%r(HTTPOptions,4000,"HTTP/1\.0\x20200\x20OK\r\nConnection:\x20c
+SF:lose\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\nDate:\x20Fr
+SF:i,\x2018\x20Sep\x202026\x2009:04:29\x20GMT\r\nCache-Control:\x20no-cach
+SF:e,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x20no-cache\r
+SF:\nSet-Cookie:\x20whostmgrrelogin=no;\x20HttpOnly;\x20SameSite=Lax;\x20e
+SF:xpires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2087;
+SF:\x20secure\r\nSet-Cookie:\x20whostmgrsession=~pre%3aoUFt4PStzr78cqFG%2c
+SF:2dde7d1631e1336aee8a119fdf974f66;\x20HttpOnly;\x20SameSite=Lax;\x20path
+SF:=/;\x20port=2087;\x20secure\r\nSet-Cookie:\x20roundcube_sessid=expired;
+SF:\x20HttpOnly;\x20SameSite=Lax;\x20expires=Thu,\x2001-Jan-1970\x2000:00:
+SF:01\x20GMT;\x20path=/;\x20port=2087;\x20secure\r\nSet-Cookie:\x20roundcu
+SF:be_sessauth=expired;\x20HttpOnly;\x20SameSite=Lax;\x20domain=gator3068\
+SF:.hostgator\.com;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20
+SF:path=/;\x20port=2087;\x20secure\r\nSet-Cookie:\x20PPA_ID=expired;\x20Ht
+SF:tpOnly;\x20SameSite=Lax;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20
+SF:GMT;\x20path=/;\x20port=2087;\x20secure\r\nX-Frame-Options:\x20SAMEORIG
+SF:IN\r\nX-Conten");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2096-TCP:V=7.99%T=SSL%I=7%D=9/18%Time=6AACFE94%P=x86_64-pc-linux-gn
+SF:u%r(GetRequest,4000,"HTTP/1\.0\x20200\x20OK\r\nConnection:\x20close\r\n
+SF:Content-Type:\x20text/html;\x20charset=\"utf-8\"\r\nDate:\x20Fri,\x2018
+SF:\x20Sep\x202026\x2009:04:28\x20GMT\r\nCache-Control:\x20no-cache,\x20no
+SF:-store,\x20must-revalidate,\x20private\r\nPragma:\x20no-cache\r\nSet-Co
+SF:okie:\x20webmailrelogin=no;\x20HttpOnly;\x20SameSite=Lax;\x20expires=Th
+SF:u,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secur
+SF:e\r\nSet-Cookie:\x20webmailsession=~pre%3azt9Tf9M_oCnU83J6%2c9e29aa40f4
+SF:1bd214a4d2251e82325398;\x20HttpOnly;\x20SameSite=Lax;\x20path=/;\x20por
+SF:t=2096;\x20secure\r\nSet-Cookie:\x20roundcube_sessid=expired;\x20HttpOn
+SF:ly;\x20SameSite=Lax;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;
+SF:\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20roundcube_sessaut
+SF:h=expired;\x20HttpOnly;\x20SameSite=Lax;\x20domain=gator3068\.hostgator
+SF:\.com;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x2
+SF:0port=2096;\x20secure\r\nSet-Cookie:\x20PPA_ID=expired;\x20HttpOnly;\x2
+SF:0SameSite=Lax;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20pa
+SF:th=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20roundcube_cookies=enabl
+SF:ed;\x20")%r(HTTPOptions,4000,"HTTP/1\.0\x20200\x20OK\r\nConnection:\x20
+SF:close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\nDate:\x20F
+SF:ri,\x2018\x20Sep\x202026\x2009:04:31\x20GMT\r\nCache-Control:\x20no-cac
+SF:he,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x20no-cache\
+SF:r\nSet-Cookie:\x20webmailrelogin=no;\x20HttpOnly;\x20SameSite=Lax;\x20e
+SF:xpires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;
+SF:\x20secure\r\nSet-Cookie:\x20webmailsession=~pre%3atATC030shegvgwdl%2c1
+SF:2cd57f008f6caf007540452f6a524a6;\x20HttpOnly;\x20SameSite=Lax;\x20path=
+SF:/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20roundcube_sessid=expired;\
+SF:x20HttpOnly;\x20SameSite=Lax;\x20expires=Thu,\x2001-Jan-1970\x2000:00:0
+SF:1\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20roundcub
+SF:e_sessauth=expired;\x20HttpOnly;\x20SameSite=Lax;\x20domain=gator3068\.
+SF:hostgator\.com;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20p
+SF:ath=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20PPA_ID=expired;\x20Htt
+SF:pOnly;\x20SameSite=Lax;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20G
+SF:MT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20roundcube_cook
+SF:ies=enabled;\x20");
+Service Info: Host: gator3068.hostgator.com
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Sep 18 05:09:21 2026 -- 1 IP address (1 host up) scanned in 339.44 seconds

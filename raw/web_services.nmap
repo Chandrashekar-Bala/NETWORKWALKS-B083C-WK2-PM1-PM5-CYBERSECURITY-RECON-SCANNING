@@ -1,0 +1,363 @@
+# Nmap 7.99 scan initiated Fri Sep 18 04:59:15 2026 as: /usr/lib/nmap/nmap -sV --script http-title,http-headers,http-server-header -Pn -n --reason -T3 -p 80,443,2082,2083,2086,2087,2095,2096 -oA /root/Networkwalks_PM5/web_services 192.232.216.135
+Nmap scan report for 192.232.216.135
+Host is up, received user-set (0.88s latency).
+
+PORT     STATE SERVICE      REASON         VERSION
+80/tcp   open  http         syn-ack ttl 64 Apache httpd
+| http-title: 404 Error
+|_Requested resource was /404.html
+| http-headers: 
+|   Date: Fri, 18 Sep 2026 09:03:29 GMT
+|   Server: Apache
+|   Upgrade: h2,h2c
+|   Connection: Upgrade, close
+|   Last-Modified: Wed, 25 Feb 2026 23:33:11 GMT
+|   Accept-Ranges: bytes
+|   Content-Length: 746
+|   Vary: Accept-Encoding
+|   Cache-Control: no-cache, no-store, must-revalidate
+|   Pragma: no-cache
+|   Expires: 0
+|   Content-Type: text/html
+|   
+|_  (Request type: HEAD)
+|_http-trane-info: Problem with XML parsing of /evox/about
+|_http-server-header: Apache
+443/tcp  open  ssl/http     syn-ack ttl 64 Apache httpd
+| http-headers: 
+|   Date: Fri, 18 Sep 2026 09:03:36 GMT
+|   Server: Apache
+|   X-Robots-Tag: noindex, nofollow
+|   Upgrade: h2,h2c
+|   Connection: Upgrade, close
+|   Last-Modified: Wed, 25 Feb 2026 23:33:11 GMT
+|   Accept-Ranges: bytes
+|   Content-Length: 746
+|   Vary: Accept-Encoding
+|   Cache-Control: no-cache, no-store, must-revalidate
+|   Pragma: no-cache
+|   Expires: 0
+|   Content-Type: text/html
+|   
+|_  (Request type: HEAD)
+| http-title: 404 Error
+|_Requested resource was /404.html
+|_http-server-header: Apache
+|_http-trane-info: Problem with XML parsing of /evox/about
+2082/tcp open  infowave?    syn-ack ttl 64
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.0 404 Not Found
+|     Content-Type: text/html; charset=utf-8
+|     Date: Fri, 18 Sep 2026 09:01:16 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     X-Frame-Options: SAMEORIGIN
+|     X-Content-Type-Options: nosniff
+|     Content-Length: 5749
+|     <!DOCTYPE html>
+|     <html lang="en" dir="ltr">
+|     <head>
+|     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+|     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
+|     <meta name="google" content="notranslate" />
+|     <meta name="apple-itunes-app" content="app-id=1188352635" />
+|     <meta name="robots" content="noindex, nofollow" />
+|     <title>Error</title>
+|_    <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAICAAAAEAIADSAgAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAgAAAAIAgGAAAAc3p69AAAAplJREFUWIXt1j2IHGUYB/DfOzdnjIKFkECIVWIKvUFsIkRExa9KJCLaWAgWJx4DilZ
+2083/tcp open  ssl/radsec?  syn-ack ttl 64
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Fri, 18 Sep 2026 08:59:56 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     Set-Cookie: cprelogin=no; HttpOnly; SameSite=Lax; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: cpsession=~pre%3afGjCbIbM0MHmZWA0%2c1aa0e619f126f6d9ff1b47c4cb663c0f; HttpOnly; SameSite=Lax; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; SameSite=Lax; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; SameSite=Lax; domain=gator3068.hostgator.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: PPA_ID=expired; HttpOnly; SameSite=Lax; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     X-Frame-Options: SAMEORIGIN
+|     X-Content-Type-Optio
+|   HTTPOptions: 
+|     HTTP/1.0 200 OK
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Fri, 18 Sep 2026 08:59:59 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     Set-Cookie: cprelogin=no; HttpOnly; SameSite=Lax; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: cpsession=~pre%3ah2X6T8u2prfYepe6%2c9889442c9296375401356f54eecf5b64; HttpOnly; SameSite=Lax; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; SameSite=Lax; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; SameSite=Lax; domain=gator3068.hostgator.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: PPA_ID=expired; HttpOnly; SameSite=Lax; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     X-Frame-Options: SAMEORIGIN
+|_    X-Content-Type-Optio
+2086/tcp open  gnunet?      syn-ack ttl 64
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.0 404 Not Found
+|     Content-Type: text/html; charset=utf-8
+|     Date: Fri, 18 Sep 2026 09:01:16 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     X-Frame-Options: SAMEORIGIN
+|     X-Content-Type-Options: nosniff
+|     Content-Length: 5752
+|     <!DOCTYPE html>
+|     <html lang="en" dir="ltr">
+|     <head>
+|     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+|     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
+|     <meta name="google" content="notranslate" />
+|     <meta name="apple-itunes-app" content="app-id=1188352635" />
+|     <meta name="robots" content="noindex, nofollow" />
+|     <title>Error</title>
+|_    <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAICAAAAEAIADSAgAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAgAAAAIAgGAAAAc3p69AAAAplJREFUWIXt1j2IHGUYB/DfOzdnjIKFkECIVWIKvUFsIkRExa9KJCLaWAgWJx4DilZ
+2087/tcp open  ssl/eli?     syn-ack ttl 64
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Fri, 18 Sep 2026 08:59:57 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     Set-Cookie: whostmgrrelogin=no; HttpOnly; SameSite=Lax; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: whostmgrsession=~pre%3aJzR8CdQH9TmEf0AQ%2c96de2fd7737734e7a332ddbd9cdf5b1e; HttpOnly; SameSite=Lax; path=/; port=2087; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; SameSite=Lax; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; SameSite=Lax; domain=gator3068.hostgator.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: PPA_ID=expired; HttpOnly; SameSite=Lax; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     X-Frame-Options: SAMEORIGIN
+|     X-Conten
+|   HTTPOptions: 
+|     HTTP/1.0 200 OK
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Fri, 18 Sep 2026 09:00:00 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     Set-Cookie: whostmgrrelogin=no; HttpOnly; SameSite=Lax; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: whostmgrsession=~pre%3aYrPsmpRkrKiozrhI%2c4451b30e265ce858ff2bbafa488e887f; HttpOnly; SameSite=Lax; path=/; port=2087; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; SameSite=Lax; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; SameSite=Lax; domain=gator3068.hostgator.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: PPA_ID=expired; HttpOnly; SameSite=Lax; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     X-Frame-Options: SAMEORIGIN
+|_    X-Conten
+2095/tcp open  nbx-ser?     syn-ack ttl 64
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.0 404 Not Found
+|     Content-Type: text/html; charset=utf-8
+|     Date: Fri, 18 Sep 2026 09:01:16 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     X-Frame-Options: SAMEORIGIN
+|     X-Content-Type-Options: nosniff
+|     Content-Length: 5750
+|     <!DOCTYPE html>
+|     <html lang="en" dir="ltr">
+|     <head>
+|     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+|     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
+|     <meta name="google" content="notranslate" />
+|     <meta name="apple-itunes-app" content="app-id=1188352635" />
+|     <meta name="robots" content="noindex, nofollow" />
+|     <title>Error</title>
+|_    <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAICAAAAEAIADSAgAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAgAAAAIAgGAAAAc3p69AAAAplJREFUWIXt1j2IHGUYB/DfOzdnjIKFkECIVWIKvUFsIkRExa9KJCLaWAgWJx4DilZ
+2096/tcp open  ssl/nbx-dir? syn-ack ttl 64
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Fri, 18 Sep 2026 08:59:57 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     Set-Cookie: webmailrelogin=no; HttpOnly; SameSite=Lax; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: webmailsession=~pre%3a1INmUVGqmC3k0OOU%2cf8687f98f6504690cf8dfcd2d71b2d29; HttpOnly; SameSite=Lax; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; SameSite=Lax; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; SameSite=Lax; domain=gator3068.hostgator.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: PPA_ID=expired; HttpOnly; SameSite=Lax; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: roundcube_cookies=enabled;
+|   HTTPOptions: 
+|     HTTP/1.0 200 OK
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Fri, 18 Sep 2026 09:00:00 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     Set-Cookie: webmailrelogin=no; HttpOnly; SameSite=Lax; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: webmailsession=~pre%3aCS3Ba80RkBScZIkM%2ced5cd5fbc722bb504f9825b7c036840a; HttpOnly; SameSite=Lax; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; SameSite=Lax; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; SameSite=Lax; domain=gator3068.hostgator.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: PPA_ID=expired; HttpOnly; SameSite=Lax; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|_    Set-Cookie: roundcube_cookies=enabled;
+6 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2082-TCP:V=7.99%I=7%D=9/18%Time=6AACFDD4%P=x86_64-pc-linux-gnu%r(SI
+SF:POptions,1630,"HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Type:\x20tex
+SF:t/html;\x20charset=utf-8\r\nDate:\x20Fri,\x2018\x20Sep\x202026\x2009:01
+SF::16\x20GMT\r\nCache-Control:\x20no-cache,\x20no-store,\x20must-revalida
+SF:te,\x20private\r\nPragma:\x20no-cache\r\nX-Frame-Options:\x20SAMEORIGIN
+SF:\r\nX-Content-Type-Options:\x20nosniff\r\nContent-Length:\x205749\r\n\r
+SF:\n\n<!DOCTYPE\x20html>\n<html\x20lang=\"en\"\x20dir=\"ltr\">\n<head>\n\
+SF:x20\x20\x20\x20<meta\x20http-equiv=\"Content-Type\"\x20content=\"text/h
+SF:tml;\x20charset=utf-8\"\x20/>\n\x20\x20\x20\x20<meta\x20name=\"viewport
+SF:\"\x20content=\"width=device-width,\x20initial-scale=1\.0,\x20maximum-s
+SF:cale=1\.0,\x20user-scalable=1\">\n\x20\x20\x20\x20<meta\x20name=\"googl
+SF:e\"\x20content=\"notranslate\"\x20/>\n\x20\x20\x20\x20<meta\x20name=\"a
+SF:pple-itunes-app\"\x20content=\"app-id=1188352635\"\x20/>\n\x20\x20\x20\
+SF:x20<meta\x20name=\"robots\"\x20content=\"noindex,\x20nofollow\"\x20/>\n
+SF:\x20\x20\x20\x20<title>Error</title>\n\x20\x20\x20\x20<link\x20rel=\"sh
+SF:ortcut\x20icon\"\x20href=\"data:image/x-icon;base64,AAABAAEAICAAAAEAIAD
+SF:SAgAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAgAAAAIAgGAAAAc3p69AAAAplJREFUWIXt1j
+SF:2IHGUYB/DfOzdnjIKFkECIVWIKvUFsIkRExa9KJCLaWAgWJx4DilZ");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2083-TCP:V=7.99%T=SSL%I=7%D=9/18%Time=6AACFD84%P=x86_64-pc-linux-gn
+SF:u%r(GetRequest,4000,"HTTP/1\.0\x20200\x20OK\r\nConnection:\x20close\r\n
+SF:Content-Type:\x20text/html;\x20charset=\"utf-8\"\r\nDate:\x20Fri,\x2018
+SF:\x20Sep\x202026\x2008:59:56\x20GMT\r\nCache-Control:\x20no-cache,\x20no
+SF:-store,\x20must-revalidate,\x20private\r\nPragma:\x20no-cache\r\nSet-Co
+SF:okie:\x20cprelogin=no;\x20HttpOnly;\x20SameSite=Lax;\x20expires=Thu,\x2
+SF:001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\n
+SF:Set-Cookie:\x20cpsession=~pre%3afGjCbIbM0MHmZWA0%2c1aa0e619f126f6d9ff1b
+SF:47c4cb663c0f;\x20HttpOnly;\x20SameSite=Lax;\x20path=/;\x20port=2083;\x2
+SF:0secure\r\nSet-Cookie:\x20roundcube_sessid=expired;\x20HttpOnly;\x20Sam
+SF:eSite=Lax;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/
+SF:;\x20port=2083;\x20secure\r\nSet-Cookie:\x20roundcube_sessauth=expired;
+SF:\x20HttpOnly;\x20SameSite=Lax;\x20domain=gator3068\.hostgator\.com;\x20
+SF:expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2083
+SF:;\x20secure\r\nSet-Cookie:\x20PPA_ID=expired;\x20HttpOnly;\x20SameSite=
+SF:Lax;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20p
+SF:ort=2083;\x20secure\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-Content-Type
+SF:-Optio")%r(HTTPOptions,4000,"HTTP/1\.0\x20200\x20OK\r\nConnection:\x20c
+SF:lose\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\nDate:\x20Fr
+SF:i,\x2018\x20Sep\x202026\x2008:59:59\x20GMT\r\nCache-Control:\x20no-cach
+SF:e,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x20no-cache\r
+SF:\nSet-Cookie:\x20cprelogin=no;\x20HttpOnly;\x20SameSite=Lax;\x20expires
+SF:=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20se
+SF:cure\r\nSet-Cookie:\x20cpsession=~pre%3ah2X6T8u2prfYepe6%2c9889442c9296
+SF:375401356f54eecf5b64;\x20HttpOnly;\x20SameSite=Lax;\x20path=/;\x20port=
+SF:2083;\x20secure\r\nSet-Cookie:\x20roundcube_sessid=expired;\x20HttpOnly
+SF:;\x20SameSite=Lax;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x
+SF:20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20roundcube_sessauth=
+SF:expired;\x20HttpOnly;\x20SameSite=Lax;\x20domain=gator3068\.hostgator\.
+SF:com;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20p
+SF:ort=2083;\x20secure\r\nSet-Cookie:\x20PPA_ID=expired;\x20HttpOnly;\x20S
+SF:ameSite=Lax;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path
+SF:=/;\x20port=2083;\x20secure\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-Cont
+SF:ent-Type-Optio");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2086-TCP:V=7.99%I=7%D=9/18%Time=6AACFDD4%P=x86_64-pc-linux-gnu%r(SI
+SF:POptions,1782,"HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Type:\x20tex
+SF:t/html;\x20charset=utf-8\r\nDate:\x20Fri,\x2018\x20Sep\x202026\x2009:01
+SF::16\x20GMT\r\nCache-Control:\x20no-cache,\x20no-store,\x20must-revalida
+SF:te,\x20private\r\nPragma:\x20no-cache\r\nX-Frame-Options:\x20SAMEORIGIN
+SF:\r\nX-Content-Type-Options:\x20nosniff\r\nContent-Length:\x205752\r\n\r
+SF:\n\n<!DOCTYPE\x20html>\n<html\x20lang=\"en\"\x20dir=\"ltr\">\n<head>\n\
+SF:x20\x20\x20\x20<meta\x20http-equiv=\"Content-Type\"\x20content=\"text/h
+SF:tml;\x20charset=utf-8\"\x20/>\n\x20\x20\x20\x20<meta\x20name=\"viewport
+SF:\"\x20content=\"width=device-width,\x20initial-scale=1\.0,\x20maximum-s
+SF:cale=1\.0,\x20user-scalable=1\">\n\x20\x20\x20\x20<meta\x20name=\"googl
+SF:e\"\x20content=\"notranslate\"\x20/>\n\x20\x20\x20\x20<meta\x20name=\"a
+SF:pple-itunes-app\"\x20content=\"app-id=1188352635\"\x20/>\n\x20\x20\x20\
+SF:x20<meta\x20name=\"robots\"\x20content=\"noindex,\x20nofollow\"\x20/>\n
+SF:\x20\x20\x20\x20<title>Error</title>\n\x20\x20\x20\x20<link\x20rel=\"sh
+SF:ortcut\x20icon\"\x20href=\"data:image/x-icon;base64,AAABAAEAICAAAAEAIAD
+SF:SAgAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAgAAAAIAgGAAAAc3p69AAAAplJREFUWIXt1j
+SF:2IHGUYB/DfOzdnjIKFkECIVWIKvUFsIkRExa9KJCLaWAgWJx4DilZ");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2087-TCP:V=7.99%T=SSL%I=7%D=9/18%Time=6AACFD85%P=x86_64-pc-linux-gn
+SF:u%r(GetRequest,4000,"HTTP/1\.0\x20200\x20OK\r\nConnection:\x20close\r\n
+SF:Content-Type:\x20text/html;\x20charset=\"utf-8\"\r\nDate:\x20Fri,\x2018
+SF:\x20Sep\x202026\x2008:59:57\x20GMT\r\nCache-Control:\x20no-cache,\x20no
+SF:-store,\x20must-revalidate,\x20private\r\nPragma:\x20no-cache\r\nSet-Co
+SF:okie:\x20whostmgrrelogin=no;\x20HttpOnly;\x20SameSite=Lax;\x20expires=T
+SF:hu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2087;\x20secu
+SF:re\r\nSet-Cookie:\x20whostmgrsession=~pre%3aJzR8CdQH9TmEf0AQ%2c96de2fd7
+SF:737734e7a332ddbd9cdf5b1e;\x20HttpOnly;\x20SameSite=Lax;\x20path=/;\x20p
+SF:ort=2087;\x20secure\r\nSet-Cookie:\x20roundcube_sessid=expired;\x20Http
+SF:Only;\x20SameSite=Lax;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GM
+SF:T;\x20path=/;\x20port=2087;\x20secure\r\nSet-Cookie:\x20roundcube_sessa
+SF:uth=expired;\x20HttpOnly;\x20SameSite=Lax;\x20domain=gator3068\.hostgat
+SF:or\.com;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\
+SF:x20port=2087;\x20secure\r\nSet-Cookie:\x20PPA_ID=expired;\x20HttpOnly;\
+SF:x20SameSite=Lax;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20
+SF:path=/;\x20port=2087;\x20secure\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-
+SF:Conten")%r(HTTPOptions,4000,"HTTP/1\.0\x20200\x20OK\r\nConnection:\x20c
+SF:lose\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\nDate:\x20Fr
+SF:i,\x2018\x20Sep\x202026\x2009:00:00\x20GMT\r\nCache-Control:\x20no-cach
+SF:e,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x20no-cache\r
+SF:\nSet-Cookie:\x20whostmgrrelogin=no;\x20HttpOnly;\x20SameSite=Lax;\x20e
+SF:xpires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2087;
+SF:\x20secure\r\nSet-Cookie:\x20whostmgrsession=~pre%3aYrPsmpRkrKiozrhI%2c
+SF:4451b30e265ce858ff2bbafa488e887f;\x20HttpOnly;\x20SameSite=Lax;\x20path
+SF:=/;\x20port=2087;\x20secure\r\nSet-Cookie:\x20roundcube_sessid=expired;
+SF:\x20HttpOnly;\x20SameSite=Lax;\x20expires=Thu,\x2001-Jan-1970\x2000:00:
+SF:01\x20GMT;\x20path=/;\x20port=2087;\x20secure\r\nSet-Cookie:\x20roundcu
+SF:be_sessauth=expired;\x20HttpOnly;\x20SameSite=Lax;\x20domain=gator3068\
+SF:.hostgator\.com;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20
+SF:path=/;\x20port=2087;\x20secure\r\nSet-Cookie:\x20PPA_ID=expired;\x20Ht
+SF:tpOnly;\x20SameSite=Lax;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20
+SF:GMT;\x20path=/;\x20port=2087;\x20secure\r\nX-Frame-Options:\x20SAMEORIG
+SF:IN\r\nX-Conten");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2095-TCP:V=7.99%I=7%D=9/18%Time=6AACFDD5%P=x86_64-pc-linux-gnu%r(SI
+SF:POptions,1520,"HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Type:\x20tex
+SF:t/html;\x20charset=utf-8\r\nDate:\x20Fri,\x2018\x20Sep\x202026\x2009:01
+SF::16\x20GMT\r\nCache-Control:\x20no-cache,\x20no-store,\x20must-revalida
+SF:te,\x20private\r\nPragma:\x20no-cache\r\nX-Frame-Options:\x20SAMEORIGIN
+SF:\r\nX-Content-Type-Options:\x20nosniff\r\nContent-Length:\x205750\r\n\r
+SF:\n\n<!DOCTYPE\x20html>\n<html\x20lang=\"en\"\x20dir=\"ltr\">\n<head>\n\
+SF:x20\x20\x20\x20<meta\x20http-equiv=\"Content-Type\"\x20content=\"text/h
+SF:tml;\x20charset=utf-8\"\x20/>\n\x20\x20\x20\x20<meta\x20name=\"viewport
+SF:\"\x20content=\"width=device-width,\x20initial-scale=1\.0,\x20maximum-s
+SF:cale=1\.0,\x20user-scalable=1\">\n\x20\x20\x20\x20<meta\x20name=\"googl
+SF:e\"\x20content=\"notranslate\"\x20/>\n\x20\x20\x20\x20<meta\x20name=\"a
+SF:pple-itunes-app\"\x20content=\"app-id=1188352635\"\x20/>\n\x20\x20\x20\
+SF:x20<meta\x20name=\"robots\"\x20content=\"noindex,\x20nofollow\"\x20/>\n
+SF:\x20\x20\x20\x20<title>Error</title>\n\x20\x20\x20\x20<link\x20rel=\"sh
+SF:ortcut\x20icon\"\x20href=\"data:image/x-icon;base64,AAABAAEAICAAAAEAIAD
+SF:SAgAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAgAAAAIAgGAAAAc3p69AAAAplJREFUWIXt1j
+SF:2IHGUYB/DfOzdnjIKFkECIVWIKvUFsIkRExa9KJCLaWAgWJx4DilZ");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2096-TCP:V=7.99%T=SSL%I=7%D=9/18%Time=6AACFD84%P=x86_64-pc-linux-gn
+SF:u%r(GetRequest,4000,"HTTP/1\.0\x20200\x20OK\r\nConnection:\x20close\r\n
+SF:Content-Type:\x20text/html;\x20charset=\"utf-8\"\r\nDate:\x20Fri,\x2018
+SF:\x20Sep\x202026\x2008:59:57\x20GMT\r\nCache-Control:\x20no-cache,\x20no
+SF:-store,\x20must-revalidate,\x20private\r\nPragma:\x20no-cache\r\nSet-Co
+SF:okie:\x20webmailrelogin=no;\x20HttpOnly;\x20SameSite=Lax;\x20expires=Th
+SF:u,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secur
+SF:e\r\nSet-Cookie:\x20webmailsession=~pre%3a1INmUVGqmC3k0OOU%2cf8687f98f6
+SF:504690cf8dfcd2d71b2d29;\x20HttpOnly;\x20SameSite=Lax;\x20path=/;\x20por
+SF:t=2096;\x20secure\r\nSet-Cookie:\x20roundcube_sessid=expired;\x20HttpOn
+SF:ly;\x20SameSite=Lax;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;
+SF:\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20roundcube_sessaut
+SF:h=expired;\x20HttpOnly;\x20SameSite=Lax;\x20domain=gator3068\.hostgator
+SF:\.com;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x2
+SF:0port=2096;\x20secure\r\nSet-Cookie:\x20PPA_ID=expired;\x20HttpOnly;\x2
+SF:0SameSite=Lax;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20pa
+SF:th=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20roundcube_cookies=enabl
+SF:ed;\x20")%r(HTTPOptions,4000,"HTTP/1\.0\x20200\x20OK\r\nConnection:\x20
+SF:close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\nDate:\x20F
+SF:ri,\x2018\x20Sep\x202026\x2009:00:00\x20GMT\r\nCache-Control:\x20no-cac
+SF:he,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x20no-cache\
+SF:r\nSet-Cookie:\x20webmailrelogin=no;\x20HttpOnly;\x20SameSite=Lax;\x20e
+SF:xpires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;
+SF:\x20secure\r\nSet-Cookie:\x20webmailsession=~pre%3aCS3Ba80RkBScZIkM%2ce
+SF:d5cd5fbc722bb504f9825b7c036840a;\x20HttpOnly;\x20SameSite=Lax;\x20path=
+SF:/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20roundcube_sessid=expired;\
+SF:x20HttpOnly;\x20SameSite=Lax;\x20expires=Thu,\x2001-Jan-1970\x2000:00:0
+SF:1\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20roundcub
+SF:e_sessauth=expired;\x20HttpOnly;\x20SameSite=Lax;\x20domain=gator3068\.
+SF:hostgator\.com;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20p
+SF:ath=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20PPA_ID=expired;\x20Htt
+SF:pOnly;\x20SameSite=Lax;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20G
+SF:MT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20roundcube_cook
+SF:ies=enabled;\x20");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Sep 18 05:03:41 2026 -- 1 IP address (1 host up) scanned in 266.14 seconds
