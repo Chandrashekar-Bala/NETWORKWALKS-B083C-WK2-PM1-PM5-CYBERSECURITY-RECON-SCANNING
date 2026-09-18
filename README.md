@@ -1,5 +1,4 @@
 <div align="center">
-# 🔐 Week 2 — Networkwalks Cybersecurity Assessment
 
 ### External Footprinting • Passive Reconnaissance • Network Scanning • Evidence-Based Security Analysis
 
